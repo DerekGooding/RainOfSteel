@@ -95,4 +95,16 @@ internal class Mech(string name, int health = 100, int maxEnergy = 50, int maxLo
             .GetWeight(this)
             .GetDamageOutput(this)
             .Build();
+
+    public void DisplayStats()
+    {
+        Console.WriteLine($"Mech: {Name}");
+        Console.WriteLine($"Health: {Health}");
+        Console.WriteLine($"Energy: {Energy}");
+        Console.WriteLine("Components:");
+        foreach (var component in Components)
+        {
+            Console.WriteLine($" - {component.Name}");
+        }
+    }
 }
